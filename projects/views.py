@@ -1,10 +1,20 @@
 from django.shortcuts import render
-from projects.models import Project
+from projects.models import Project,Contact
 
 def home(request):
     return render(request, 'index.html', {}) #home page
 
 def project_index(request):
+    if request.method == "POST":
+        contact = Contact()
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        contact.name = name
+        contact.email = email
+        contact.subject = subject
+        contact.save()
+        
     projects = Project.objects.all() #querying model data
     context = {
         'projects': projects
