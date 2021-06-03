@@ -121,3 +121,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#email settings
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False #secure socket layer

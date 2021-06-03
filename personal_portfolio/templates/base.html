@@ -17,51 +17,12 @@
            <p class="lead">Full Stack Web-Developer</p>
           <hr class="my-4">
           <div class="col-md-4 col-xl-2 mt-4">
-            <a id="reserveButton" role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#contactModal">Contact Me</a>
+            <a id="reserveButton" role="button" class="btn btn-lg btn-info" href="{% url 'contact_me' %}" >Contact Me</a>
           </div>
         </div> 
       </div>
     </div>
   </header>
-  <!--Modal Content-->
-  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title w-100 font-weight-bold text-center" id="contactModalLabel">Get in touch</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body mx-3">
-          <form class="" method="post" action="#">
-            <div class="form-group row">
-              <label for="firstName" class="col-md-2 col-form-label">Your Name</label>
-              <div class="col-md-10">
-                <input type="text" class="form-control" id="fName" name="name" placeholder="Type your Name"/>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="email" class="col-md-2 col-form-label">Your Email</label>
-                <div class="col-md-10">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Type your Email" />
-                </div>
-            </div>
-            <div class="form-group row">
-              <label for="subject" class="col-md-2 col-form-label">Subject</label>
-                <div class="col-md-10">
-                  <input class="form-control" id="subject" name="subject" placeholder="What're you emailing about?" />
-                </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
           <a class="navbar-brand" href="{% url 'project_index' %}">Andre's Portfolio</a>
@@ -84,7 +45,7 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                   <a class="dropdown-item" href="#">Linkedin</a>
                   <a class="dropdown-item" href="#">Github</a>
-                  <a class="dropdown-item" href="#">Download myResume</a>
+                  <a class="dropdown-item" href="#">Download my Resume</a>
                   </div>
               </li>
             </ul>

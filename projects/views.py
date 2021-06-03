@@ -1,20 +1,12 @@
 from django.shortcuts import render
-from projects.models import Project,Contact
+from projects.models import Project
+from django.http import HttpResponse
+from django.core.mail import send_mail
 
 def home(request):
     return render(request, 'index.html', {}) #home page
 
 def project_index(request):
-    if request.method == "POST":
-        contact = Contact()
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        contact.name = name
-        contact.email = email
-        contact.subject = subject
-        contact.save()
-        
     projects = Project.objects.all() #querying model data
     context = {
         'projects': projects
@@ -27,3 +19,24 @@ def project_detail(request,pk):
         'project': project
     }
     return render(request, 'project_detail.html',context)
+
+def contact_me(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        surname = request.POST['surname']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        
+        #send email
+        send_mail(
+            subject + ' message from '+ name + surname, #subject
+            message,#message
+            email,#from email
+            ['lpakaco@gmail.com','andre.vasquez.14@gmail.com'],#to email
+        )
+    
+        return render(request, 'contact_index.html',{'name': name,})
+     
+    else:   
+        return render(request,'contact_index.html',{})
