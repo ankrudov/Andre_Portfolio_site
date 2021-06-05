@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-  <header class="jumbotron jumbotron-fluid">
+<!--Jumbotron-->
+  <header class="jumbotron jumbotron-fluid mb-0">
     <div class="container">
       <div class="row">
         <div class="col-4 col-sm-3 col-md-2 align-self-center">
@@ -23,7 +24,8 @@
       </div>
     </div>
   </header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 mb-5">
       <div class="container">
           <a class="navbar-brand" href="{% url 'project_index' %}">Andre's Portfolio</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,8 +45,8 @@
                       Links
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                  <a class="dropdown-item" href="#">Linkedin</a>
-                  <a class="dropdown-item" href="#">Github</a>
+                  <a class="dropdown-item" href="https://www.linkedin.com/in/andre-vasquez-20221/" target="_blank">Linkedin</a>
+                  <a class="dropdown-item" href="https://github.com/ankrudov" target="_blank">Github</a>
                   <a class="dropdown-item" href="#">Download my Resume</a>
                   </div>
               </li>
@@ -53,6 +55,56 @@
       </div>
   </nav>
 {% block page_content %}{% endblock %}
+<footer class="bg-dark text-center text-white mt-5">
+  <!-- Grid container -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Find me on social Media!</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f">Facebook</i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter">Twittwer</i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram">Instagram</i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin">Linkedin</i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github">Github</i>
+      </a>
+    </div>
+    
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+    <!-- Section: Social media -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Thank you for visiting my site, if you have any question or would like to hire me <br>
+        <a  href="{% url 'contact_me' %}">Click the contact link.</a>
+      </p>
+    </section>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" >Andre Vasquez</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

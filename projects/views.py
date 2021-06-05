@@ -30,7 +30,7 @@ def contact_me(request):
         
         #send email
         send_mail(
-            subject + ' message from '+ name + surname, #subject
+            subject + ' message from '+ name +" " + surname, #subject
             message,#message
             email,#from email
             ['lpakaco@gmail.com','andre.vasquez.14@gmail.com'],#to email
