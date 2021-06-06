@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="container-fluid">
+    <h2 class="mb-4">Meet Andre!</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 ">
+            <button class="btn btn-outline-dark btn-lg" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">About Me</button>
+            <button class="btn btn-outline-dark btn-lg" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What i know</button>
+            <button class="btn btn-outline-dark btn-lg" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="#collapseThree">Experience</button>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4 col-xs-12 ">
+            <div class="collapse multi-collapse" id="collapseOne">
+                <div class="card mt-4" style="width: 28rem;">
+                    <div class="card-header">
+                        <h5>Hi im Andre!<h5>
+                    </div>
+                    <img src="{% static 'img/me.jpg' %}" class="img-fluid rounded float-left" alt="my image">
+                    <div class="card-body">
+                        <p class="card-text">My name is Andre Vasquez, self-taught web-developer with the life goal of seeing every country! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-12 ">
+            <div class="collapse multi-collapse" id="collapseTwo">
+                <div class="card mt-4" style="width: 28rem;">
+                    <div class="card-header">
+                        <h5>Tech Skills<h5>
+                    </div>
+                    <img src="{% static 'img/pl.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="my tech">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML</li>
+                        <li class="list-group-item">CSS</li>
+                        <li class="list-group-item">Javascript</li>
+                        <li class="list-group-item">Python</li>
+                        <li class="list-group-item">Bootstrap</li>
+                        <li class="list-group-item">Django</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--experience accordion-->
+        <div class="col-md-4 col-xs-12 ">
+            <div class="collapse multi-collapse" id="collapseThree">
+                <div class="accordion" id="experienceAccordion1">
+                        <div class="card mt-4">
+                            <div class="card-header" id="ikea">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#xp1" aria-expanded="false" aria-controls="xp1">
+                                        Ikea 2017-Present
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="xp1" class="collapse" aria-labelledby="ikea" data-parent="#experienceAccordion1">
+                                <div class="card-body">
+                                    <ul>
+                                    <li>Logistics Coordinator</li>
+                                    <li>Warehouse Administrator</li>
+                                    <li>Equipment Trainer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
