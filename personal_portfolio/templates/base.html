@@ -5,7 +5,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Font styles-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Indie+Flower&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+  body{background: linear-gradient(#CDF0EA,#F9F9F9);font-family: 'Asap Condensed', sans-serif;color:#3B5360;}
+  <!--jumbonav-->
+  .jumbotron{background: linear-gradient(to right,#F6C6EA,#CDF0EA);}
+  .display-4{background: -webkit-linear-gradient(#FF5200,#72147E,#CDF0EA);-webkit-background-clip: text; -webkit-text-fill-color: transparent;);font-family: 'Roboto', sans-serif; font-size: 7rem;}
+  .lead{font-family: 'Asap Condensed', sans-serif;font-size:2rem;}
+  <!--footer-->
+  footer{position: static;left: 0; bottom: 0; width: 100%; font-size:1rem;}
+  .feet{color:black;}
+  </style>
 </head>
 <body>
 <!--Jumbotron-->
@@ -17,7 +32,7 @@
         </div>
         <div class="col">
           <h1 class="display-4">Andre Vasquez</h1>
-           <p class="lead">Full Stack Web-Developer</p>
+           <p class="lead">Full-Stack Web Developer</p>
           <hr class="my-4">
           <div class="col-md-4 col-xl-2 mt-4">
             <a id="reserveButton" role="button" class="btn btn-lg btn-info" href="{% url 'contact_me' %}" >Contact Me</a>
@@ -27,8 +42,8 @@
     </div>
   </header>
   <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 mb-5">
-      <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light mt-0 mb-5" style="background:linear-gradient(to right,#CDF0EA,#CEE5D0);">
+      <div class="container" >
           <a class="navbar-brand" href="{% url 'project_index' %}">Andre's Portfolio</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,54 +72,50 @@
       </div>
   </nav>
 {% block page_content %}{% endblock %}
-<footer class="bg-dark text-center text-white mt-5">
-  <!-- Grid container -->
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Find me on social Media!</span>
-    </div>
-    <!-- Left -->
+<footer class="page-footer font-small special-color-dark pt-4" style="background:linear-gradient(to right,#CDF0EA,#CEE5D0);">
 
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f">Facebook</i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter">Twittwer</i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram">Instagram</i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin">Linkedin</i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github">Github</i>
-      </a>
-    </div>
-    
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-    <!-- Section: Social media -->
+  <!-- Footer Elements -->
+  <div class="container">
 
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        Thank you for visiting my site, if you have any question or would like to hire me <br>
-        <a  href="{% url 'contact_me' %}">Click the contact link.</a>
-      </p>
-    </section>
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/andre.vasquez.39948856" target="_blank">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1" href="https://twitter.com/LpakaCo" target="_blank">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-git mx-1" href="https://github.com/ankrudov" target="_blank">
+          <i class="fab fa-github"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/andre-vasquez-20221/" target="_blank">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-insta mx-1" href="https://www.instagram.com/" target="_blank">
+          <i class="fab fa-instagram"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" >Andre Vasquez</a>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a> Andre Vasquez</a>
   </div>
   <!-- Copyright -->
+
 </footer>
 <!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
